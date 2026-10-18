@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="Good food, generous pours, and easy online ordering at OLAKS Restaurant and Bar.">
+  <title>OLAKS Restaurant & Bar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="OLAKS Restaurant home">
+      <img class="brand-logo" src="Olaks%20Gold%20Restaurant%20Bar%20Emblem.png" alt="OLAKS Restaurant and Bar">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#menu">Our menu</a>
+      <a href="#story">About the owner</a>
+      <a href="#visit">Find us</a>
+    </nav>
+    <button class="cart-trigger" id="open-cart" type="button" aria-label="Open your basket">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+      <span class="cart-label">Your order</span><span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <img class="hero-banner" src="Olaks%20Restaurant%20%26%20Bar%20Banner.png" alt="OLAKS Restaurant & Bar: Good Food, Great Drinks, Better Vibes">
+      <div class="hero-banner-action"><a class="button button-dark" href="#menu">Explore the menu <span aria-hidden="true">↘</span></a></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> Made for sharing</p>
+          <h2>Big taste.<br><em>Big energy.</em></h2>
+        </div>
+        <p class="section-intro">Explore our Nigerian meals first, then browse beers, spirits, and whiskies from the bar.</p>
+      </div>
+      <nav class="menu-jump" aria-label="Menu sections">
+        <a href="#food-menu">Food menu <span>Meals from our kitchen</span></a>
+        <a href="#drinks-menu">Drinks menu <span>Beers and spirits from the bar</span></a>
+        <a href="#reservations">Reserve a table <span>Choose your table and pre-order</span></a>
+      </nav>
+      <section class="menu-category" id="food-menu" aria-labelledby="food-menu-heading">
+        <div class="menu-category-heading">
+          <div><p class="eyebrow"><span></span> Fresh from our kitchen</p><h3 id="food-menu-heading">Food menu</h3></div>
+          <span>Nigerian favourites</span>
+        </div>
+        <div class="menu-grid" id="food-menu-grid" aria-live="polite">
+          <article class="menu-item" data-id="white-rice-chicken" data-category="kitchen" data-price="9500">
+            <div class="menu-photo"><img src="white%20rice.jpg" alt="White rice served with chicken and tomato stew" loading="lazy"><span class="item-label">A HOUSE FAVOURITE</span></div>
+            <div class="item-details"><div><h3>White rice &amp; chicken</h3><p>Steamed white rice, seasoned chicken, and rich tomato stew.</p></div><span class="item-price">₦9,500</span></div>
+            <button class="add-button" type="button" data-add="white-rice-chicken" aria-label="Add white rice and chicken to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="jollof-chicken" data-category="kitchen" data-price="10500">
+            <div class="menu-photo"><img src="jollof%20rice.png" alt="Nigerian jollof rice served with chicken" loading="lazy"><span class="item-label">PARTY STYLE</span></div>
+            <div class="item-details"><div><h3>Jollof rice &amp; chicken</h3><p>Smoky party jollof served with grilled chicken and fried plantain.</p></div><span class="item-price">₦10,500</span></div>
+            <button class="add-button" type="button" data-add="jollof-chicken" aria-label="Add jollof rice and chicken to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="fried-rice-chicken" data-category="kitchen" data-price="11000">
+            <div class="menu-photo"><img src="fried%20ricce.jpg" alt="Fried rice served with chicken" loading="lazy"><span class="item-label">FRESH FROM THE KITCHEN</span></div>
+            <div class="item-details"><div><h3>Fried rice &amp; chicken</h3><p>Seasoned fried rice, chicken, and fresh house slaw.</p></div><span class="item-price">₦11,000</span></div>
+            <button class="add-button" type="button" data-add="fried-rice-chicken" aria-label="Add fried rice and chicken to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="chicken-chips" data-category="kitchen" data-price="12000">
+            <div class="menu-photo"><img src="chiken%20and%20chips.png" alt="Roast chicken served with crinkle-cut chips and sauce" loading="lazy"><span class="item-label">CRISPY &amp; GOLDEN</span></div>
+            <div class="item-details"><div><h3>Chicken &amp; chips</h3><p>Crispy chicken, golden chips, and house pepper sauce.</p></div><span class="item-price">₦12,000</span></div>
+            <button class="add-button" type="button" data-add="chicken-chips" aria-label="Add chicken and chips to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="amala-ewedu-beef" data-category="kitchen" data-price="13500">
+            <div class="menu-photo"><img src="amala.png" alt="Amala served with green ewedu soup and assorted meat" loading="lazy"><span class="item-label">NIGERIAN CLASSIC</span></div>
+            <div class="item-details"><div><h3>Amala, ewedu &amp; beef</h3><p>Soft amala with ewedu, stew, and tender beef.</p></div><span class="item-price">₦13,500</span></div>
+            <button class="add-button" type="button" data-add="amala-ewedu-beef" aria-label="Add amala, ewedu and beef to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="pounded-yam-egusi-turkey" data-category="kitchen" data-price="16500">
+            <div class="menu-photo"><img src="Egusi_soup_with_pounded_yam_and_assorted_meats.jpg" alt="Pounded yam served with egusi soup and assorted meats" loading="lazy"><span class="item-label">A HEARTY FAVOURITE</span></div>
+            <div class="item-details"><div><h3>Pounded yam &amp; egusi with turkey</h3><p>Smooth pounded yam with rich egusi soup and turkey.</p></div><span class="item-price">₦16,500</span></div>
+            <button class="add-button" type="button" data-add="pounded-yam-egusi-turkey" aria-label="Add pounded yam and egusi with turkey to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="yam-egg" data-category="kitchen" data-price="7500">
+            <div class="menu-photo"><img src="yam%20and%20egg.png" alt="Yam served with egg sauce" loading="lazy"><span class="item-label">BREAKFAST FAVOURITE</span></div>
+            <div class="item-details"><div><h3>Yam &amp; egg sauce</h3><p>Boiled yam served with freshly prepared egg sauce.</p></div><span class="item-price">₦7,500</span></div>
+            <button class="add-button" type="button" data-add="yam-egg" aria-label="Add yam and egg sauce to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="yam-porridge" data-category="kitchen" data-price="8500">
+            <div class="menu-photo"><img src="yam%20porridge.png" alt="A bowl of Nigerian yam porridge" loading="lazy"><span class="item-label">COMFORT FOOD</span></div>
+            <div class="item-details"><div><h3>Yam porridge</h3><p>Tender yam simmered with palm oil, pepper, and seasoning.</p></div><span class="item-price">₦8,500</span></div>
+            <button class="add-button" type="button" data-add="yam-porridge" aria-label="Add yam porridge to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="noodles-boiled-egg" data-category="kitchen" data-price="6000">
+            <div class="menu-photo"><img src="noodles%20and%20boiled%20eggs.png" alt="Noodles served with boiled eggs" loading="lazy"><span class="item-label">QUICK &amp; FILLING</span></div>
+            <div class="item-details"><div><h3>Noodles &amp; boiled eggs</h3><p>Seasoned noodles served with boiled eggs.</p></div><span class="item-price">₦6,000</span></div>
+            <button class="add-button" type="button" data-add="noodles-boiled-egg" aria-label="Add noodles and boiled eggs to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="noodles-fried-egg" data-category="kitchen" data-price="6000">
+            <div class="menu-photo"><img src="noodles%20and%20fried%20eggs.png" alt="Noodles served with a fried egg" loading="lazy"><span class="item-label">MADE TO ORDER</span></div>
+            <div class="item-details"><div><h3>Noodles &amp; fried egg</h3><p>Hot, seasoned noodles topped with a fried egg.</p></div><span class="item-price">₦6,000</span></div>
+            <button class="add-button" type="button" data-add="noodles-fried-egg" aria-label="Add noodles and fried egg to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+        </div>
+      </section>
+      <section class="menu-category drinks-category" id="drinks-menu" aria-labelledby="drinks-menu-heading">
+        <div class="menu-category-heading">
+          <div><p class="eyebrow"><span></span> Chilled and ready</p><h3 id="drinks-menu-heading">Drinks menu</h3></div>
+          <span>Beer, whiskey, and spirits</span>
+        </div>
+        <div class="menu-grid" id="drinks-menu-grid" aria-live="polite">
+          <article class="menu-item" data-id="star-lager" data-category="bar" data-price="3500">
+            <div class="menu-photo"><img src="star.png" alt="A bottle of Star Lager" loading="lazy"><span class="item-label">NIGERIAN BEER</span></div>
+            <div class="item-details"><div><h3>Star Lager</h3><p>Chilled Nigerian lager, served by the bottle.</p></div><span class="item-price">₦3,500</span></div>
+            <button class="add-button" type="button" data-add="star-lager" aria-label="Add Star Lager to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="gulder" data-category="bar" data-price="3500">
+            <div class="menu-photo"><img src="gulder.png" alt="A bottle of Gulder Lager" loading="lazy"><span class="item-label">NIGERIAN BEER</span></div>
+            <div class="item-details"><div><h3>Gulder Lager</h3><p>Full-bodied Nigerian lager, served by the bottle.</p></div><span class="item-price">₦3,500</span></div>
+            <button class="add-button" type="button" data-add="gulder" aria-label="Add Gulder Lager to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="trophy" data-category="bar" data-price="3500">
+            <div class="menu-photo"><img src="trophy.png" alt="A bottle of Trophy Lager" loading="lazy"><span class="item-label">NIGERIAN BEER</span></div>
+            <div class="item-details"><div><h3>Trophy Lager</h3><p>Refreshing Nigerian lager, served chilled by the bottle.</p></div><span class="item-price">₦3,500</span></div>
+            <button class="add-button" type="button" data-add="trophy" aria-label="Add Trophy Lager to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="guinness" data-category="bar" data-price="4000">
+            <div class="menu-photo"><img src="guiness.png" alt="A bottle of Guinness Foreign Extra Stout" loading="lazy"><span class="item-label">NIGERIAN STOUT</span></div>
+            <div class="item-details"><div><h3>Guinness Foreign Extra Stout</h3><p>Rich, bold stout, served chilled by the bottle.</p></div><span class="item-price">₦4,000</span></div>
+            <button class="add-button" type="button" data-add="guinness" aria-label="Add Guinness Foreign Extra Stout to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="jameson" data-category="bar" data-price="8000">
+            <div class="menu-photo"><img src="jameson.png" alt="A bottle of Jameson Irish Whiskey" loading="lazy"><span class="item-label">WHISKEY · PER SHOT</span></div>
+            <div class="item-details"><div><h3>Jameson Irish Whiskey</h3><p>Smooth Irish whiskey, served by the shot.</p></div><span class="item-price">₦8,000</span></div>
+            <button class="add-button" type="button" data-add="jameson" aria-label="Add Jameson Irish Whiskey to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="johnnie-walker-black" data-category="bar" data-price="10000">
+            <div class="menu-photo"><img src="black%20label.png" alt="A bottle of Johnnie Walker Black Label" loading="lazy"><span class="item-label">WHISKY · PER SHOT</span></div>
+            <div class="item-details"><div><h3>Johnnie Walker Black Label</h3><p>A rich blended Scotch whisky, served by the shot.</p></div><span class="item-price">₦10,000</span></div>
+            <button class="add-button" type="button" data-add="johnnie-walker-black" aria-label="Add Johnnie Walker Black Label to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="hennessy-vs" data-category="bar" data-price="13000">
+            <div class="menu-photo"><img src="hennessy.png" alt="A bottle of Hennessy VS" loading="lazy"><span class="item-label">COGNAC · PER SHOT</span></div>
+            <div class="item-details"><div><h3>Hennessy VS</h3><p>A bold cognac, served by the shot.</p></div><span class="item-price">₦13,000</span></div>
+            <button class="add-button" type="button" data-add="hennessy-vs" aria-label="Add Hennessy VS to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="chapman" data-category="bar" data-price="6000">
+            <div class="menu-photo"><img src="classic%20chapman.png" alt="A chilled Chapman-style drink with ice, mint, and lemon" loading="lazy"><span class="item-label">HOUSE COCKTAIL</span></div>
+            <div class="item-details"><div><h3>Classic Chapman</h3><p>A Nigerian favourite with citrus, grenadine, and a sparkling finish.</p></div><span class="item-price">₦6,000</span></div>
+            <button class="add-button" type="button" data-add="chapman" aria-label="Add Classic Chapman to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="zobo-spritz" data-category="bar" data-price="5500">
+            <div class="menu-photo"><img src="zobo%20spritz.png" alt="A chilled red zobo spritz" loading="lazy"><span class="item-label">LOCAL COCKTAIL</span></div>
+            <div class="item-details"><div><h3>Zobo Spritz</h3><p>Hibiscus zobo, citrus, and soda for a bright local twist.</p></div><span class="item-price">₦5,500</span></div>
+            <button class="add-button" type="button" data-add="zobo-spritz" aria-label="Add Zobo Spritz to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="mango-mojito" data-category="bar" data-price="7000">
+            <div class="menu-photo"><img src="mango%20mojito.png" alt="A mango mojito with mint and ice" loading="lazy"><span class="item-label">COCKTAIL</span></div>
+            <div class="item-details"><div><h3>Mango Mojito</h3><p>Mango, mint, lime, and rum over crushed ice.</p></div><span class="item-price">₦7,000</span></div>
+            <button class="add-button" type="button" data-add="mango-mojito" aria-label="Add Mango Mojito to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="strawberry-daiquiri" data-category="bar" data-price="7500">
+            <div class="menu-photo"><img src="strawberry%20daiquiri.png" alt="A strawberry daiquiri served chilled" loading="lazy"><span class="item-label">COCKTAIL</span></div>
+            <div class="item-details"><div><h3>Strawberry Daiquiri</h3><p>Strawberry, lime, and rum blended until smooth.</p></div><span class="item-price">₦7,500</span></div>
+            <button class="add-button" type="button" data-add="strawberry-daiquiri" aria-label="Add Strawberry Daiquiri to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="zobo-mocktail" data-category="bar" data-price="3500">
+            <div class="menu-photo"><img src="fresh%20zobo%20cooler.png" alt="A chilled non-alcoholic zobo drink" loading="lazy"><span class="item-label">MOCKTAIL · NO ALCOHOL</span></div>
+            <div class="item-details"><div><h3>Fresh Zobo Cooler</h3><p>House-made hibiscus drink with ginger and pineapple, no alcohol.</p></div><span class="item-price">₦3,500</span></div>
+            <button class="add-button" type="button" data-add="zobo-mocktail" aria-label="Add Fresh Zobo Cooler to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="virgin-mojito" data-category="bar" data-price="4000">
+            <div class="menu-photo"><img src="virgin%20mojito.png" alt="A non-alcoholic mojito with mint and lime" loading="lazy"><span class="item-label">MOCKTAIL · NO ALCOHOL</span></div>
+            <div class="item-details"><div><h3>Virgin Mojito</h3><p>Mint, lime, and soda over ice, no alcohol.</p></div><span class="item-price">₦4,000</span></div>
+            <button class="add-button" type="button" data-add="virgin-mojito" aria-label="Add Virgin Mojito to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+          <article class="menu-item" data-id="pineapple-ginger" data-category="bar" data-price="4000">
+            <div class="menu-photo"><img src="pineapple%20ginger%20fizz.png" alt="A pineapple and ginger mocktail" loading="lazy"><span class="item-label">MOCKTAIL · NO ALCOHOL</span></div>
+            <div class="item-details"><div><h3>Pineapple Ginger Fizz</h3><p>Pineapple, fresh ginger, and soda, no alcohol.</p></div><span class="item-price">₦4,000</span></div>
+            <button class="add-button" type="button" data-add="pineapple-ginger" aria-label="Add Pineapple Ginger Fizz to your order"><span aria-hidden="true">+</span> Add to order</button>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="reservation-section" id="reservations" aria-labelledby="reservation-heading">
+      <div class="reservation-heading">
+        <p class="eyebrow"><span></span> Make it your occasion</p>
+        <h2 id="reservation-heading">Reserve a table<br><em>at OLAKS.</em></h2>
+        <p>Choose your table, tell us when you’re coming, and pre-order food or drinks. We’ll confirm your reservation by WhatsApp.</p>
+      </div>
+      <form class="reservation-form" id="reservation-form">
+        <div class="reservation-field-grid">
+          <label>Your name<input name="name" autocomplete="name" required placeholder="Full name"></label>
+          <label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"></label>
+          <label>Date<input name="date" id="reservation-date" type="date" required></label>
+          <label>Arrival time<input name="time" type="time" required></label>
+          <label>Number of guests<input name="guests" type="number" min="1" max="30" value="2" required></label>
+        </div>
+        <fieldset class="table-type-options">
+          <legend>Choose your table</legend>
+          <label><input type="radio" name="tableType" value="Regular" checked><span><strong>Regular</strong><small>Comfortable seating for your visit</small></span></label>
+          <label><input type="radio" name="tableType" value="VIP"><span><strong>VIP</strong><small>A more private setting for your occasion</small></span></label>
+        </fieldset>
+        <div class="reservation-preorder">
+          <fieldset class="reservation-choice-group">
+            <legend>Pre-order food <small>Optional</small></legend>
+            <div class="reservation-options" id="reservation-food-options"></div>
+          </fieldset>
+          <fieldset class="reservation-choice-group">
+            <legend>Pre-order drinks <small>Optional</small></legend>
+            <div class="reservation-options" id="reservation-drink-options"></div>
+          </fieldset>
+        </div>
+        <label class="reservation-notes">Special requests<textarea name="notes" rows="3" placeholder="Let us know about any special requests"></textarea></label>
+        <p class="reservation-status" id="reservation-status" role="status"></p>
+        <button class="button button-dark" type="submit">Request reservation <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1300&q=85" alt="Warm, welcoming restaurant dining room">
+        <span class="story-image-label">YOUR TABLE IS WAITING</span>
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow"><span></span> The heart behind OLAKS</p>
+        <h2>Ajibike Mariam<br><em>Olakitan.</em></h2>
+        <p>At 27, Ajibike Mariam Olakitan is the owner of OLAKS Restaurant & Bar. She holds a B.L.C. in Public Administration and completed a four-year course in catering.</p>
+        <p>Married to Ukanah Daniel and a mother of three, Ajibike Mariam Olakitan brings real skill and dedication to her work. Her care for food and hospitality is at the heart of OLAKS.</p>
+        <a class="text-link" href="#visit">Visit OLAKS <span aria-hidden="true">↗</span></a>
+        <div class="story-signoff">Made with care. <strong>That is OLAKS.</strong></div>
+      </div>
+    </section>
+
+    <section class="visit-section" id="visit">
+      <div class="visit-title"><p class="eyebrow"><span></span> Make an evening of it</p><h2>See you <em>at OLAKS.</em></h2></div>
+      <div class="visit-detail"><span>FIND US</span><p>No. 8 Bembo Street<br>Sango, Ibadan</p></div>
+      <div class="visit-detail"><span>WE'RE OPEN</span><p>Monday – Sunday<br>12 noon till late</p></div>
+      <div class="visit-detail"><span>CALL US</span><p><a href="tel:+2348060075227">08060075227</a><a href="tel:+2347048322318">07048322318</a></p></div>
+      <a class="button button-light" href="#menu">Order something good <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">OLAKS RESTAURANT & BAR</a>
+    <span>Good food, good company.</span>
+    <div class="social-links" aria-label="Contact and social media">
+      <a href="mailto:ukanah6@gmail.com" aria-label="Email OLAKS Restaurant" title="Email us">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+      </a>
+      <a href="https://www.facebook.com/search/top/?q=ukanah%20daniel%20eneye" target="_blank" rel="noopener noreferrer" aria-label="Find Ukanah Daniel Eneye on Facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.2V13H10v8h3.4Z"/></svg>
+      </a>
+      <a href="https://www.google.com/search?q=site%3Ainstagram.com+%22ukanah+daniel+eneye%22" target="_blank" rel="noopener noreferrer" aria-label="Find Ukanah Daniel Eneye on Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@ukanahdaniel948" target="_blank" rel="noopener noreferrer" aria-label="Visit Ukanah Daniel on TikTok" title="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h3c.2 2 1.4 3.7 3.5 4.4v3.2a9 9 0 0 1-3.5-1.2v6.2a6.4 6.4 0 1 1-6.4-6.4c.5 0 1 .1 1.4.2v3.4a3.1 3.1 0 1 0 1.9 2.8V3Z"/></svg>
+      </a>
+    </div>
+    <span>© 2026 OLAKS Restaurant & Bar</span>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/2347048322318" target="_blank" rel="noopener noreferrer" aria-label="Chat with OLAKS Restaurant on WhatsApp" title="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.88 3 3.06 8.8 3.06 15.94c0 2.28.6 4.5 1.75 6.45L3 29l6.78-1.77a13.1 13.1 0 0 0 6.25 1.58h.01c7.16 0 12.98-5.8 12.98-12.94A12.86 12.86 0 0 0 16.04 3Zm0 23.62a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-4.02 1.05 1.07-3.9-.26-.41a10.68 10.68 0 0 1-1.65-5.68c0-5.92 4.83-10.74 10.77-10.74 2.88 0 5.58 1.12 7.61 3.14a10.66 10.66 0 0 1 3.15 7.6c0 5.92-4.83 10.74-10.77 10.74Zm5.91-8.04c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.84-1.59-1.89-1.77-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.27-.63-.54-.55-.73-.56h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.11 1.32 3.32c.16.21 2.28 3.47 5.52 4.87.77.33 1.37.53 1.84.68.77.25 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.76.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"/></svg>
+  </a>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Your order" aria-hidden="true">
+    <div class="drawer-header">
+      <div><p class="eyebrow"><span></span> Saved you a seat</p><h2>Your order</h2></div>
+      <button class="icon-button" id="close-cart" type="button" aria-label="Close basket">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span aria-hidden="true">✳</span><p>Your table's looking a little empty.</p><a href="#menu" class="text-link" id="browse-menu">Find something delicious <span aria-hidden="true">↗</span></a></div>
+    <div class="drawer-bottom" id="drawer-bottom" hidden>
+      <div class="subtotal"><span>Subtotal</span><strong id="cart-subtotal">₦0</strong></div>
+      <p class="order-note">Delivery fees, if any, are confirmed with your order.</p>
+      <button class="button button-dark checkout-trigger" id="checkout-trigger" type="button">Continue to checkout <span aria-hidden="true">→</span></button>
+      <form class="checkout-form" id="checkout-form" hidden>
+        <label>Your name<input name="name" autocomplete="name" required placeholder="e.g. Ada Okafor"></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"></label>
+        <label>How would you like it?
+          <select name="service" id="service-type"><option value="Pickup">I'll pick it up</option><option value="Delivery">Please deliver</option></select>
+        </label>
+        <label id="address-field" hidden>Delivery address<input name="address" autocomplete="street-address" placeholder="Street, area, city"></label>
+        <p class="checkout-message" id="checkout-message" role="status"></p>
+        <button class="button button-dark" type="submit">Send order request <span aria-hidden="true">↗</span></button>
+      </form>
+    </div>
+  </aside>
+
+  <script>
+    // Add the restaurant's WhatsApp number here, with country code and digits only.
+    const RESTAURANT_WHATSAPP = "2347048322318";
+
+    const currency = new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", maximumFractionDigits: 0 });
+    const menuItems = [...document.querySelectorAll(".menu-item")].map(card => ({
+      id: card.dataset.id,
+      category: card.dataset.category,
+      price: Number(card.dataset.price),
+      image: card.querySelector(".menu-photo img").getAttribute("src"),
+      alt: card.querySelector(".menu-photo img").alt,
+      label: card.querySelector(".item-label").textContent.trim(),
+      name: card.querySelector(".item-details h3").textContent.trim(),
+      description: card.querySelector(".item-details p").textContent.trim()
+    }));
+    const cart = new Map();
+    const drawer = document.getElementById("cart-drawer");
+    const backdrop = document.getElementById("drawer-backdrop");
+    const checkoutForm = document.getElementById("checkout-form");
+    const reservationForm = document.getElementById("reservation-form");
+
+      function renderReservationOptions(category, targetId) {
+        const options = menuItems.filter(item => item.category === category);
+        document.getElementById(targetId).innerHTML = options.map(item => `
+          <label class="reservation-option">
+            <span><strong>${item.name}</strong><small>${currency.format(item.price)}</small></span>
+            <input type="number" name="reservation-quantity-${item.id}" min="0" max="20" value="0" aria-label="Quantity of ${item.name}">
+          </label>`).join("");
+      }
+
+    function renderCart() {
+      const entries = [...cart.entries()];
+      const count = entries.reduce((sum, [, quantity]) => sum + quantity, 0);
+      const subtotal = entries.reduce((sum, [id, quantity]) => sum + menuItems.find(item => item.id === id).price * quantity, 0);
+      document.getElementById("cart-count").textContent = count;
+      document.getElementById("cart-items").innerHTML = entries.map(([id, quantity]) => {
+        const item = menuItems.find(menuItem => menuItem.id === id);
+        return `<div class="cart-line"><img src="${item.image}" alt=""><div class="cart-line-info"><strong>${item.name}</strong><span>${currency.format(item.price)}</span><div class="quantity-control"><button type="button" data-change="${id}" data-delta="-1" aria-label="Remove one ${item.name}">−</button><span>${quantity}</span><button type="button" data-change="${id}" data-delta="1" aria-label="Add one ${item.name}">+</button></div></div><strong class="line-total">${currency.format(item.price * quantity)}</strong></div>`;
+      }).join("");
+      document.getElementById("cart-empty").hidden = count > 0;
+      document.getElementById("drawer-bottom").hidden = count === 0;
+      document.getElementById("cart-subtotal").textContent = currency.format(subtotal);
+      if (count === 0) checkoutForm.hidden = true;
+    }
+
+    function setDrawer(open) {
+      drawer.classList.toggle("is-open", open);
+      backdrop.classList.toggle("is-visible", open);
+      drawer.setAttribute("aria-hidden", String(!open));
+      document.body.classList.toggle("drawer-open", open);
+      if (!open) {
+        checkoutForm.hidden = true;
+        document.getElementById("checkout-trigger").hidden = false;
+        document.getElementById("checkout-message").textContent = "";
+      }
+    }
+
+    document.addEventListener("click", event => {
+      const addButton = event.target.closest("[data-add]");
+      const quantityButton = event.target.closest("[data-change]");
+      if (addButton) {
+        const id = addButton.dataset.add;
+        cart.set(id, (cart.get(id) || 0) + 1);
+        renderCart();
+        addButton.classList.add("just-added");
+        window.setTimeout(() => addButton.classList.remove("just-added"), 500);
+      }
+      if (quantityButton) {
+        const next = (cart.get(quantityButton.dataset.change) || 0) + Number(quantityButton.dataset.delta);
+        if (next > 0) cart.set(quantityButton.dataset.change, next);
+        else cart.delete(quantityButton.dataset.change);
+        renderCart();
+      }
+    });
+
+    document.getElementById("open-cart").addEventListener("click", () => setDrawer(true));
+    document.getElementById("close-cart").addEventListener("click", () => setDrawer(false));
+    backdrop.addEventListener("click", () => setDrawer(false));
+    document.getElementById("browse-menu").addEventListener("click", () => setDrawer(false));
+    document.getElementById("checkout-trigger").addEventListener("click", () => {
+      checkoutForm.hidden = false;
+      document.getElementById("checkout-trigger").hidden = true;
+      checkoutForm.querySelector("input").focus();
+    });
+    document.getElementById("service-type").addEventListener("change", event => {
+      const addressField = document.getElementById("address-field");
+      const delivery = event.target.value === "Delivery";
+      addressField.hidden = !delivery;
+      addressField.querySelector("input").required = delivery;
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") setDrawer(false);
+    });
+
+    checkoutForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const details = new FormData(checkoutForm);
+      const orderLines = [...cart.entries()].map(([id, quantity]) => {
+        const item = menuItems.find(menuItem => menuItem.id === id);
+        return `${quantity} x ${item.name} - ${currency.format(item.price * quantity)}`;
+      });
+      const subtotal = [...cart.entries()].reduce((sum, [id, quantity]) => sum + menuItems.find(item => item.id === id).price * quantity, 0);
+      const message = [
+        "Hello OLAKS Restaurant, I'd like to place an order:",
+        ...orderLines,
+        `Subtotal: ${currency.format(subtotal)}`,
+        `Name: ${details.get("name")}`,
+        `Phone: ${details.get("phone")}`,
+        `Order type: ${details.get("service")}`,
+        details.get("address") ? `Delivery address: ${details.get("address")}` : ""
+      ].filter(Boolean).join("\n");
+      const phone = RESTAURANT_WHATSAPP.replace(/\D/g, "");
+      const status = document.getElementById("checkout-message");
+      if (!phone) {
+        status.textContent = "To receive orders, add your restaurant WhatsApp number in the page setup first.";
+        return;
+      }
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+      status.textContent = "Your order is ready to send in WhatsApp. The restaurant will confirm availability and delivery.";
+    });
+
+    reservationForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const details = new FormData(reservationForm);
+      const selectedItems = category => menuItems
+        .filter(item => item.category === category)
+        .map(item => ({ item, quantity: Number(details.get(`reservation-quantity-${item.id}`)) }))
+        .filter(({ quantity }) => quantity > 0)
+        .map(({ item, quantity }) => `${quantity} x ${item.name} - ${currency.format(item.price * quantity)}`);
+      const foodOrders = selectedItems("kitchen");
+      const drinkOrders = selectedItems("bar");
+      const reservationDate = new Date(`${details.get("date")}T00:00:00`).toLocaleDateString("en-NG", { year: "numeric", month: "long", day: "numeric" });
+      const message = [
+        "Hello OLAKS, I'd like to request a table reservation:",
+        `Name: ${details.get("name")}`,
+        `Phone: ${details.get("phone")}`,
+        `Date: ${reservationDate}`,
+        `Arrival time: ${details.get("time")}`,
+        `Guests: ${details.get("guests")}`,
+        `Table: ${details.get("tableType")}`,
+        `Food pre-order: ${foodOrders.length ? foodOrders.join("; ") : "None"}`,
+        `Drinks pre-order: ${drinkOrders.length ? drinkOrders.join("; ") : "None"}`,
+        details.get("notes") ? `Special requests: ${details.get("notes")}` : ""
+      ].filter(Boolean).join("\n");
+      const status = document.getElementById("reservation-status");
+      const phone = RESTAURANT_WHATSAPP.replace(/\D/g, "");
+      if (!phone) {
+        status.textContent = "WhatsApp reservations are not configured yet. Please contact the restaurant directly.";
+        return;
+      }
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+      status.textContent = "Your reservation request is ready to send in WhatsApp. OLAKS will confirm table availability and your pre-order.";
+    });
+
+    const reservationDateInput = document.getElementById("reservation-date");
+    const today = new Date();
+    today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+    reservationDateInput.min = today.toISOString().slice(0, 10);
+    renderReservationOptions("kitchen", "reservation-food-options");
+    renderReservationOptions("bar", "reservation-drink-options");
+    renderCart();
+  </script>
+</body>
+</html>
